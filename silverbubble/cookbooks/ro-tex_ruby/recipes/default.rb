@@ -23,6 +23,6 @@ template '/etc/init.d/optimo_ui' do
 end
 
 execute 'echo' do
-  command 'echo " >>> THIS IS SOME OUTPUT <<< " > /home/ivo/output'
+  command 'echo " >>> THIS IS SOME OUTPUT <<< "'
   action :nothing
 end
