@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <h1>hello from <%= node['fqdn'] %>, I'm Chef!</h1>
+    <pre>
+    IP: <%= node['ipaddress'] %>
+    MAC: <%= node['macaddress'] %>
+    Ruby version: <%= node['ro-tex_ruby']['ruby_version'] %>
+    </pre>
+  </body>
+</html>
