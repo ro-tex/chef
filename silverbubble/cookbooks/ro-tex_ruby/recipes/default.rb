@@ -19,4 +19,10 @@ template '/etc/init.d/optimo_ui' do
   mode '0755'
   owner 'root'
   group 'root'
+  #notifies :action, 'execute[echo]'
+end
+
+execute 'echo' do
+  command 'echo " >>> THIS IS SOME OUTPUT <<< " > /home/ivo/output'
+  #action :nothing
 end
