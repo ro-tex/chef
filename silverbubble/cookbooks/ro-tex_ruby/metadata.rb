@@ -1,8 +1,8 @@
 name             'ro-tex_ruby'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'SilverBubble'
+maintainer_email 'inovakov@gmail.com'
 license          'All rights reserved'
-description      'Installs/Configures ro-tex_ruby'
+description      'Installs/Configures the desired version of Ruby and sets up our service'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.0.1'
 
