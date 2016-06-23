@@ -7,22 +7,30 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# This one is custom - it installs ruby and then runs bundler
 include_recipe 'rvm::system_install'
 
-# https://docs.chef.io/resource_file.html
-
-# Use the cookbook_file resource to copy a file from a cookbook’s /files directory. 
-# Use the template resource to create a file based on a template in a cookbook’s /templates 
-# directory. And use the remote_file resource to transfer a file to a node from a remote location.
 template '/etc/init.d/optimo_ui' do
   source 'optimo_ui.erb'
   mode '0755'
   owner 'root'
   group 'root'
-  notifies :run, 'execute[echo]', :immediately
+  notifies :run, 'execute[bundle]', :immediately
 end
 
-execute 'echo' do
-  command 'echo " >>> THIS IS SOME OUTPUT <<< "'
+execute 'bundle' do
+  command 'cd /opt/Source/optimo_ui && bundle'
+  notifies :run, 'execute[service_stop]', :immediately
+  action :nothing
+end
+
+execute 'service_stop' do
+  command 'service optimo_ui stop'
+  notifies :run, 'execute[service_start]', :immediately
+  action :nothing
+end
+
+execute 'service_start' do
+  command 'service optimo_ui start'
   action :nothing
 end
