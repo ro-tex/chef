@@ -1,0 +1,7 @@
+name 'rifiniti_maven'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures rifiniti_maven'
+long_description 'Installs/Configures rifiniti_maven'
+version '0.1.0'
