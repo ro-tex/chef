@@ -4,4 +4,4 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-include_recipe 'maven'
+include_recipe 'rifiniti::maven'

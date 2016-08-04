@@ -1,2 +1,2 @@
-include_recipe 'java'
-include_recipe 'maven::default
+include_recipe 'rifiniti::java'
+include_recipe 'maven::default'
