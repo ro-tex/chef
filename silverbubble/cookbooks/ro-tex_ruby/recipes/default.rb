@@ -15,7 +15,13 @@ template '/etc/init.d/optimo_ui' do
   mode '0755'
   owner 'root'
   group 'root'
+  notifies :run, 'execute[gem]', :immediately
+end
+
+execute 'gem' do
+  command 'gem install bundler'
   notifies :run, 'execute[bundle]', :immediately
+  action :nothing
 end
 
 execute 'bundle' do

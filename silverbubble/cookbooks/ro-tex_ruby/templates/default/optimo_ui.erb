@@ -39,9 +39,9 @@ APP_NAME="optimo_ui"
 APP_ROOT="/opt/Source/optimo_ui"
 PID="/tmp/unicorn.optimo_ui.pid"
 ENV=production
-USER=rifiniti
+USER=ivo
  
-GEM_HOME="/home/rifiniti/.rvm/gems/ruby-<%= node['ro-tex_ruby']['ruby_version'] %>"
+GEM_HOME="/home/ivo/.rvm/gems/ruby-<%= node['ro-tex_ruby']['ruby_version'] %>"
  
 UNICORN_OPTS="-E $ENV -D -p 3000 -c $APP_ROOT/config/unicorn.rb"
  
