@@ -1,4 +1,4 @@
-# rifiniti_maven
+# rifiniti
 
 TODO: Enter the cookbook description here.
 
