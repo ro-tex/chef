@@ -24,7 +24,6 @@ knife client delete node1 --yes
 
 sudo rm /etc/chef/client.pem <- the certificate generated on each node, so they can talk to Chef's API server
 
-
 =============================================================================================
 
 1. Need a recipe/cookbook that installs the right version of Ruby, Rails, etc. and then updates Optimo's service file.
@@ -33,3 +32,4 @@ sudo rm /etc/chef/client.pem <- the certificate generated on each node, so they 
 
 3. How to replace just part of a file and not the entire content?
 
+4. How to use an existing cookbook but set a bunch of attributes?
