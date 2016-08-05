@@ -1,0 +1,7 @@
+name 'rep_parent'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures rep_parent'
+long_description 'Installs/Configures rep_parent'
+version '0.1.0'
