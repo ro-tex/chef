@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network :forwarded_port, guest: 80, host: 2080
+  # config.vm.network :forwarded_port, guest: 80, host: 2080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -66,7 +66,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   # config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.provision :shell, inline: <<-SHELL
-    printf "log_location     STDOUT\nchef_server_url  'https://api.chef.io/organizations/silverbubble'\nvalidation_client_name 'silverbubble-workstation'\nnode_name 'ivo-vagrant-mac'" >/etc/chef/client.rb
+    printf "log_location     STDOUT\nchef_server_url  'https://api.chef.io/organizations/silverbubble'\nvalidation_client_name 'silverbubble-workstation'\nnode_name 'ivo-vagrant-mac'\n" >/etc/chef/client.rb
   SHELL
 
   config.vm.provider :virtualbox do |vb|
