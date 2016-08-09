@@ -2,6 +2,6 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-# cookbook 'java', '~> 1.41.0'
-# cookbook 'maven', '~> 2.2.0'
+cookbook 'java', '~> 1.41.0'
+cookbook 'maven', '~> 2.2.0'
 cookbook 'apache_spark', '~> 1.2.12'
