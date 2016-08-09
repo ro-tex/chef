@@ -1,7 +1,0 @@
-name 'apache_spark'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
-license 'all_rights'
-description 'Installs/Configures apache_spark'
-long_description 'Installs/Configures apache_spark'
-version '0.1.0'
