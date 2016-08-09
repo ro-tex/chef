@@ -71,13 +71,19 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :virtualbox do |vb|
      vb.customize ['modifyvm', :id, '--memory', 1024, '--cpus', '1']
+     # vb.gui = false
   end
+  
+  # config.omnibus.chef_version = :latest
 
-  config.vm.provision "chef_client" do |chef|
-
+  config.vm.provision :chef_client do |chef|
+    
     chef.node_name = 'ivo-vagrant-mac'
 
     chef.chef_server_url = 'https://api.chef.io/organizations/silverbubble'
+    
+    # This is basically where to store chef stuff on the node
+    # chef.provisioning_path = '/etc/chef'
 
     chef.validation_client_name = 'inovakov'
     chef.validation_key_path = 'silverbubble/.chef/inovakov.pem'
