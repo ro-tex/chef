@@ -24,7 +24,7 @@ knife client delete node1 --yes
 
 sudo rm /etc/chef/client.pem <- the certificate generated on each node, so they can talk to Chef's API server
 
-knife cookbook bulk delete ".*" <- delete all cookbooks *from the server*
+knife cookbook bulk delete ".*" <- delete all cookbooks _from the server_
 
 =============================================================================================
 

@@ -95,7 +95,7 @@ Vagrant.configure("2") do |config|
     # chef.add_recipe "rep_child"
 
     # Or maybe a role
-    # chef.add_role "web"
+    chef.add_role 'child'
 
     # chef.environment = "development"
 
