@@ -7,6 +7,17 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# This is how we inspect the resulting node object:
+# puts "\n\n\n>>>>>"
+# puts node.default.inspect
+# puts node['override'].inspect
+# puts "<<<<<\n\n\n"
+
+# This piece grabs the override attributes that might come with roles and applies them
+unless node['override']['ro-tex_ruby']['ruby_version'].nil?
+  node.default['rvm']['default_ruby'] = node['override']['ro-tex_ruby']['ruby_version']
+  node.default['rvm']['user_default_ruby'] = node['override']['ro-tex_ruby']['ruby_version']
+end
 # This one is custom - it installs ruby and then runs bundler
 include_recipe 'rvm::system'
 
