@@ -8,7 +8,7 @@
 #
 
 # This one is custom - it installs ruby and then runs bundler
-include_recipe 'rvm::system_install'
+include_recipe 'rvm::system'
 
 template '/etc/init.d/optimo_ui' do
   source 'optimo_ui.erb'
