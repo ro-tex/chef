@@ -14,7 +14,7 @@
 # puts "<<<<<\n\n\n"
 
 # This piece grabs the override attributes that might come with roles and applies them
-unless node['override']['ro-tex_ruby']['ruby_version'].nil?
+unless node['override'].nil? || node['override']['ro-tex_ruby'].nil? || node['override']['ro-tex_ruby']['ruby_version'].nil?
   node.default['rvm']['default_ruby'] = node['override']['ro-tex_ruby']['ruby_version']
   node.default['rvm']['user_default_ruby'] = node['override']['ro-tex_ruby']['ruby_version']
 end
